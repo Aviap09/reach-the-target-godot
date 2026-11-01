@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bu4x6wtmoatyx" path="res://Texture/Player.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://b6slhc1qbcgow" path="res://Scripts/Player.cs" id="1_uu6xs"]
 [ext_resource type="Script" uid="uid://cjr0yq84asgp7" path="res://Scripts/Target.cs" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://cjrkah6oclho7" path="res://Texture/Target.png" id="4_cm0pq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smax1"]
 size = Vector2(41, 77)
@@ -29,6 +30,7 @@ position = Vector2(1069, 309)
 script = ExtResource("3_r0du0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Target" unique_id=200987454]
+texture = ExtResource("4_cm0pq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Target" unique_id=1564445693]
 shape = SubResource("CircleShape2D_smax1")
