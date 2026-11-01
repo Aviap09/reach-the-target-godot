@@ -6,7 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smax1"]
 size = Vector2(41, 77)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_smax1"]
+radius = 49.010204
+
 [node name="Main" type="Node2D" unique_id=1623594608]
+position = Vector2(63, 285)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=2024810769]
 script = ExtResource("1_uu6xs")
@@ -18,3 +22,11 @@ texture = ExtResource("1_glv2v")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=730245518]
 position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_smax1")
+
+[node name="Target" type="Area2D" parent="." unique_id=2132930122]
+position = Vector2(1024, -8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Target" unique_id=200987454]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target" unique_id=1564445693]
+shape = SubResource("CircleShape2D_smax1")
