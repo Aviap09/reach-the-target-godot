@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bu4x6wtmoatyx" path="res://Texture/Player.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://b6slhc1qbcgow" path="res://Scripts/Player.cs" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://cjr0yq84asgp7" path="res://Scripts/Target.cs" id="3_r0du0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smax1"]
 size = Vector2(41, 77)
@@ -10,9 +11,9 @@ size = Vector2(41, 77)
 radius = 49.010204
 
 [node name="Main" type="Node2D" unique_id=1623594608]
-position = Vector2(63, 285)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=2024810769]
+position = Vector2(68, 308)
 script = ExtResource("1_uu6xs")
 Speed = 500.0
 
@@ -24,9 +25,12 @@ position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_smax1")
 
 [node name="Target" type="Area2D" parent="." unique_id=2132930122]
-position = Vector2(1024, -8)
+position = Vector2(1069, 309)
+script = ExtResource("3_r0du0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Target" unique_id=200987454]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Target" unique_id=1564445693]
 shape = SubResource("CircleShape2D_smax1")
+
+[connection signal="body_entered" from="Target" to="Target" method="OnBodyEntered"]
